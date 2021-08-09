@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'blog',
 ]
 
@@ -114,13 +115,24 @@ USE_L10N = True
 
 USE_TZ = True
 
+import os
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
+#CKEditor settings
+#Static File
+STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CDEitor
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "uploads/"

@@ -6,3 +6,6 @@ db.sqlite3
 
 #Migrations
 blog/migrations/
+
+#file static
+file/
